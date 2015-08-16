@@ -33,7 +33,8 @@ login into mysql server then:
 Now you can run app:
 
 ```$ sbt run ```
-you will see this outut
+
+you will see this output
 
 ```info] Running com.knol.db.Demo 
 [INFO] - [2015-08-16 18:42:25,070] - [com.zaxxer.hikari.HikariDataSource]  HikariCP pool mysql is starting.
