@@ -16,6 +16,6 @@ private[connection] object MySqlDB {
 
   import slick.driver.MySQLDriver.api._
 
-  val connectionPool = Database.forConfig("dbconf")
+  val connectionPool = Database.forConfig("mysql")
 
 }

@@ -2,6 +2,7 @@ package com.knol.db.repo
 
 import com.knol.db.connection.DBComponent
 import scala.concurrent.Future
+import com.knol.db.connection.MySqlDBComponent
 
 trait BankProductRepository extends BankProductTable { this: DBComponent =>
 
@@ -56,5 +57,7 @@ private[repo] trait BankProductTable extends BankTable { this: DBComponent =>
   protected def brandProductTableAutoInc = brandProductTableQuery returning brandProductTableQuery.map(_.id)
 
 }
+
+object BankProductRepository extends BankProductRepository with MySqlDBComponent
 
 case class BankProduct(name: String, bankId: Int, id: Option[Int] = None)
